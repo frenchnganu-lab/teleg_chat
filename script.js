@@ -27,8 +27,7 @@ form.addEventListener("submit", async function (event) {
     phone: formData.get("phone") || "",
     email: formData.get("email") || "",
 
-    product: selectedProduct,
-    interest: selectedProduct,
+  interest: formData.get("interest") || "",
 
     comment: formData.get("comment") || "",
 
