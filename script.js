@@ -17,14 +17,19 @@ form.addEventListener("submit", async function (event) {
 
   const formData = new FormData(form);
 
+  const selectedProduct = formData.get("product") || "";
+
   const lead = {
     date: new Date().toLocaleString("ru-RU"),
     page: "client_landing",
 
     name: formData.get("name") || "",
     phone: formData.get("phone") || "",
-    clientType: formData.get("clientType") || "",
-    product: formData.get("product") || "",
+    email: formData.get("email") || "",
+
+    product: selectedProduct,
+    interest: selectedProduct,
+
     comment: formData.get("comment") || "",
 
     telegramUsername: tg?.initDataUnsafe?.user?.username || "Не определён",
