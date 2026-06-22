@@ -24,7 +24,7 @@ form.addEventListener("submit", async function (event) {
     name: formData.get("name") || "",
     phone: formData.get("phone") || "",
     clientType: formData.get("clientType") || "",
-    product: formData.get("interest") || "",
+    interest: formData.get("interest") || "",
     comment: formData.get("comment") || "",
 
     telegramUsername: tg?.initDataUnsafe?.user?.username || "Не определён",
